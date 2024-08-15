@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #f5f5f5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    background-image: url(img/bible_bc.jpg);
+    border-bottom: 2px solid #ccc;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+.search-container {
+    padding: 20px;
+    text-align: center;
+}
+
+#searchInput {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #283593;
+    border-radius: 5px;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto; /* Allow vertical scrolling */
+    height: fit-content;
+    padding: 10px;
+    margin: 0;
+    width: fit-content;
+}
+
+.category-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(23% - 20px); /* Adjust percentage to fit the layout */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.category-card:hover {
+    background-color: #d5d5d5;
+}
+
+.category-card h2 {
+    color: #283593;
+    margin-bottom: 10px;
+}
+
+/* Same styles as before */
+
+.verses {
+    display: none;
+    padding: 20px;
+}
+
+.verses h2 {
+    color: #283593;
+    margin-bottom: 15px;
+}
+
+.verses ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.verses ul li {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #283593;
+}
+
+#backButton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #283593;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#backButton:hover {
+    background-color: #1a237e;
+}
+
+#shareButton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#shareButton:hover {
+    background-color: #128C7E;
+}
+
+.shareSingleButton {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.shareSingleButton:hover {
+    background-color: #128C7E;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    background-color: #283593;
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid #ccc;
+}

@@ -1,0 +1,265 @@
+// Tamil Bible BSI version verses data
+// Tamil Bible BSI version verses data
+const verses = {
+    hope: [
+        "எரேமியா 29:11 - நீங்கள் எதிர்பார்த்திருக்கும் முடிவை உங்களுக்கு கொடுக்கும்படிக்கு நான் உங்கள்பேரில் நினைத்திருக்கிற நினைவுகளை அறிவேன் என்று கர்த்தர் சொல்லுகிறார்; அவைகள் தீமைக்கல்ல, சமாதானத்துக்கேதுவான நினைவுகளே.",
+        "ரோமர் 15:13 - பரிசுத்த ஆவியின் பலத்தினாலே உங்களுக்கு நம்பிக்கை பெருகும்படிக்கு, நம்பிக்கையின் தேவன் விசுவாசத்தினால் உண்டாகும் எல்லாவித சந்தோஷத்தினாலும் சமாதானத்தினாலும் உங்களை நிரப்புவாராக.",
+        "சங்கீதம் 42:11 - என் ஆத்துமாவே, நீ ஏன் கலங்குகிறாய்? ஏன் எனக்குள் தியங்குகிறாய்? தேவனை நோக்கிக் காத்திரு; என் முகத்திற்கு இரட்சிப்பும் என் தேவனுமாயிருக்கிறவரை நான் இன்னும் துதிப்பேன்.",
+        "2 இரா-18:5 - அவன் இஸ்ரவேலின் தேவனாகிய கர்த்தரின்மேல் வைத்த நம்பிக்கையிலே, அவனுக்குப் பின்னும் அவனுக்கு முன்னும் இருந்த யூதாவின் ராஜாக்களிலெல்லாம் அவனைப்போல் ஒருவனும் இருந்ததில்லை.",
+        "ஏசாயா 40:31 - கர்த்தருக்குக் காத்திருக்கிறவர்களோ புதுப்பெலனடைந்து, கழுகுகளைப்போலச் செட்டைகளை அடித்து எழும்புவார்கள்; அவர்கள் ஓடினாலும் இளைப்படையார்கள், நடந்தாலும் சோர்ந்துபோகார்கள்.",
+        "மீகா 7:7 - நானோ கர்த்தரை நோக்கிக்கொண்டு, என் இரட்சிப்பின் தேவனுக்குக் காத்திருப்பேன்; என் தேவன் என்னைக் கேட்டருளுவார்.",
+        "ரோமர் 5:3,4 - அதுமாத்திரமல்ல, உபத்திரவம் பொறுமையையும், பொறுமை பரீட்சையையும், பரீட்சை நம்பிக்கையையும் உண்டாக்குகிறதென்று நாங்கள் அறிந்து, உபத்திரவங்களிலேயும் மேன்மைபாராட்டுகிறோம்."
+    ],
+    faith: [
+        "எபிரேயர் 11:1 - 'நம்பிக்கை என்பது நாம் ஏங்குகிறவற்றின் உறுதியாகவும்...'",
+        "2 கொரிந்தியர் 5:7 - 'நாம் காட்சியால் அல்ல நம்பிக்கையினாலேயே வாழ்கிறோம்.'",
+        "மாற்கு 11:22 - 'இயேசு பதிலளித்து, 'தெய்வத்தின் மீது நம்பிக்கை வைத்திருங்கள்' என்றார்."
+    ],
+    peace: [
+        "பிலிப்பியர் 4:7 - 'இயேசுவில் காணப்படும் தேவனின் சமாதானம் உங்கள் இருதயங்களையும்...'",
+        "யோவான் 14:27 - 'சமாதானத்தை நான் உங்களுக்கு விடுக்கிறேன்; எனது சமாதானத்தை உங்களுக்கு கொடுக்கிறேன்...'",
+        "எசாயா 26:3 - 'நினைவில் உறுதியானவர்களைத் தேவன் சாந்தியிலே வைத்து பாதுகாப்பார்...'"
+    ],
+    wisdom: [
+        "நீதிமொழிகள் 3:5-6 - 'உங்கள் பூரணமான மனதோடு தேவனின் மீது நம்பிக்கையாயிருங்கள்...'",
+        "யாக்கோபு 1:5 - 'உங்களில் யாருக்காவது ஞானமில்லையெனில், தேவனை நாடி கேட்கட்டும்...'",
+        "நீதிமொழிகள் 2:6 - 'தேவன் ஞானத்தை தருகிறார்; அவருடைய வாயிலிருந்து அறிவும் நுண்ணறிவும் வருகிறது.'"
+    ],
+    strength: [
+        "எசாயா 40:31 - 'ஆனாலும், தேவனை நம்பும் அவர்கள் புதிய சக்தி பெறுவர்...'",
+        "எபிசியர் 6:10 - 'கர்த்தருக்குள்ளே, அவருடைய வல்லமைவால் வலிமைபெறுங்கள்.'",
+        "நீதிமொழிகள் 24:10 - 'நீங்கள் தாராளமில்லை என்றால், உங்கள் சக்தி குறைவாகும்.'"
+    ],
+    comfort: [
+        "சங்கீதம் 34:18 - 'நான் உயர்ந்தவன் வஞ்சகராக இருக்கிறேன்; அவனும் நெருங்குகிறான்...'",
+        "மத்தேயு 5:4 - 'அவர்களுக்குத்தானை துக்கம் கொண்டவர்கள் ஆசீர்வதிக்கப்பட்டவர்கள்!'",
+        "2 கொரிந்தியர் 1:3-4 - 'எங்கள் கர்த்தருக்கும் தந்தையுக்கும் தேவனாகிய இயேசுவுக்கு நன்றி...' "
+    ],
+    guidance: [
+        "நீதிமொழிகள் 3:6 - 'அவன் உங்களை வழிநடத்தும் வழியில் நடத்துக.'",
+        "எசாயா 30:21 - 'உங்களின் பின்விளைவுகளை நீங்கள் கேட்கும்போது...' ",
+        "சங்கீதம் 119:105 - 'உங்கள் வார்த்தை என் அடிபணியையும் அடிப்படையும்.'"
+    ],
+    gratitude: [
+        "சங்கீதம் 107:1 - 'நாம் தேவனுக்கு நன்றி சொல்லுங்கள்; அவன் நன்கு செய்கிறான்.'",
+        "1 திரொணிகர் 5:18 - 'எல்லா விஷயங்களிலும் நன்றி கூறுங்கள்.'",
+        "எபிசியர் 5:20 - 'எல்லா நன்றியோடும், அன்போடும் தேவனை போற்றுங்கள்.'"
+    ],
+    love: [
+        "1 கொரிந்தியர் 13:4-7 - 'அன்பு நீண்டகாலமாக பொறுத்தது, அன்பு சுலபமாகக்கூடுகிறது.'",
+        "யோவான் 3:16 - 'தெய்வம் உலகத்தை அன்பு செய்தான்.'",
+        "1 யோவான் 4:7 - 'அன்பு பெறும் ஒவ்வொருவரும் தேவனால் பிறக்கிறார்கள்.'"
+    ],
+    courage: [
+        "எஸ்தேர் 4:14 - 'நீங்கள் இங்கு சற்று நம்பிக்கைமுடன் மடக்கியிருத்தாலும்...' ",
+        "எஸ்ரா 10:4 - 'இந்த செயல்களைச் செய்யும் போது, தேவனை நம்புங்கள்!'",
+        "யோசுவா 1:9 - 'சிங்கப்பாக இருப்பதற்கும் துணிச்சலாக இருப்பதற்கும், தேவன் உங்களோடு இருக்கிறார்.'"
+    ],
+    forgiveness: [
+        "மத்தேயு 6:14-15 - 'நீங்கள் மனிதர்களுக்குப் பிறகு மன்னிக்கையில்லையெனில்...' ",
+        "எபிசியர் 4:32 - 'ஒருவருக்கொருவர், தயவுடன், தயிரென உங்கள் மன்னிப்பு ...'",
+        "லூக்கா 6:37 - 'மன்னிக்கையா இருங்கள், நீங்கள் மன்னிக்கையாயிருப்பீர்கள்.'"
+    ],
+    hopeintrials: [
+        "ரோம் 5:3-4 - 'துயரங்களுக்குள்ளே நம்பிக்கை கொண்டு, நம்பிக்கை பயமற்றது.'",
+        "2 கொரிந்தியர் 1:10 - 'எங்களை உயிர்ப்புக் காத்து நம்பிக்கை வைத்தோம்.'",
+        "1 பத்திரசாரி 1:6 - 'இயேசு கிரிஸ்துவின் திரும்புமுன் நம்பிக்கையால் நமது நம்பிக்கை.'"
+    ],
+    joy: [
+        "சங்கீதம் 16:11 - 'நீங்கள் மேல் மகிழ்ச்சி கொண்டு மகிழ்ச்சியாக காக்கும்.'",
+        "நேயேமியா 8:10 - 'நம்பிக்கை என்னும் மகிழ்ச்சி உங்கள் சக்தி.'",
+        "1 தேசனலோனிகர் 5:16 - 'என்றும் மகிழ்ச்சி கொண்டிருங்கள்.'"
+    ],
+    healing: [
+        "எசாயா 53:5 - 'அவனுடைய கொரோடு நாம் குணமடைந்தோம்.'",
+        "எபிரேயர் 12:13 - 'உங்கள் பாதைகளை, உங்களை ஊக்குவிக்கும் பயிற்சிகள்...'",
+        "யாகோபு 5:15 - 'நம்பிக்கையால் மகிழ்ச்சியடையுங்கள், சுகமானவராக மாறுங்கள்.'"
+    ],
+    trust: [
+        "சங்கீதம் 37:5 - 'உங்கள் வழிகளில் திரும்புங்கள், நம்பிக்கையுடன்.'",
+        "நீதிமொழிகள் 3:5-6 - 'உங்கள் மனதின் நம்பிக்கை உணருங்கள்.'",
+        "எசாயா 26:4 - 'நீங்கள் நம்பிக்கையுடன் நம்பிக்கையாயிருங்கள்.'"
+    ],
+    prayer: [
+        "1 திரொனிகர் 5:17 - 'என்றும் பிரார்த்திக்கையில் இருங்கள்.'",
+        "மத்தேயு 7:7 - 'அந்தப் பக்கம் மாட்டுங்கள், நீங்கள் மாட்டிக்கொள்கிறீர்கள்.'",
+        "லூக்கா 18:1 - 'அவர் எப்போதும் பிரார்த்திக்கவும், ஓய்வில்லாமல் இருக்க வேண்டும்.'"
+    ]
+};
+
+
+// Function to display verses based on category and update the URL
+document.querySelectorAll('.category-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+        let category = this.getAttribute('data-category');
+        
+        // Update the URL with the selected category ID
+        window.location.hash = category;
+
+        // Show the verses for the selected category (existing functionality)
+        let verseSection = document.getElementById('verseSection');
+        let verseList = document.getElementById('verseList');
+        let categoryTitle = document.getElementById('categoryTitle');
+
+        // Set the category title
+        categoryTitle.textContent = this.querySelector('h2').textContent;
+
+        // Clear any previous verses
+        verseList.innerHTML = '';
+
+        // Populate verses (you already have this part of the code)
+        verses[category].forEach(function(verse) {
+            let li = document.createElement('li');
+            li.textContent = verse;
+
+            // Create share button for each verse (existing functionality)
+            let shareButton = document.createElement('button');
+            shareButton.textContent = "Share";
+            shareButton.classList.add('shareSingleButton');
+            shareButton.addEventListener('click', function() {
+                shareVerse(verse);
+            });
+
+            li.appendChild(shareButton);
+            verseList.appendChild(li);
+        });
+
+        // Show the verse section and hide the categories (existing functionality)
+        document.querySelector('.categories').style.display = 'none';
+        verseSection.style.display = 'block';
+    });
+});
+
+
+// Back button functionality
+document.getElementById('backButton').addEventListener('click', function() {
+    goToHomepage();
+});
+
+// Search functionality for categories by data-category and h2 text
+document.getElementById('searchInput').addEventListener('input', function() {
+    let searchTerm = this.value.toLowerCase();
+    let categories = document.querySelectorAll('.category-card');
+
+    categories.forEach(function(card) {
+        let categoryTitle = card.querySelector('h2').textContent.toLowerCase();
+        let dataCategory = card.getAttribute('data-category').toLowerCase();
+        
+        if (categoryTitle.includes(searchTerm) || dataCategory.includes(searchTerm)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+});
+
+
+// Share all verses functionality
+document.getElementById('shareButton').addEventListener('click', function() {
+    let categoryTitle = document.getElementById('categoryTitle').textContent;
+    let versesList = document.querySelectorAll('#verseList li');
+    let versesText = '';
+
+    versesList.forEach(function(li) {
+        versesText += li.childNodes[0].textContent + '\n';
+    });
+
+    let shareMessage = `${categoryTitle}:\n\n${versesText}`;
+    shareContent(shareMessage);
+});
+
+// Function to share single verse
+function shareVerse(verse) {
+    shareContent(verse);
+}
+
+// Function to share content (handles both single verse and all verses)
+function shareContent(content) {
+    if (navigator.share) {
+        navigator.share({
+            text: content,
+        }).catch((error) => console.log('Error sharing:', error));
+    } else {
+        let whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(content)}`;
+        window.open(whatsappUrl, '_blank');
+    }
+}
+
+
+// Function to display verses based on category
+function showCategory(category) {
+    let verseSection = document.getElementById('verseSection');
+    let verseList = document.getElementById('verseList');
+    let categoryTitle = document.getElementById('categoryTitle');
+
+    // Set the category title
+    categoryTitle.textContent = document.querySelector(`[data-category="${category}"] h2`).textContent;
+
+    // Clear any previous verses
+    verseList.innerHTML = '';
+
+    // Populate verses with share button
+    verses[category].forEach(function(verse) {
+        let li = document.createElement('li');
+        li.textContent = verse;
+
+        // Create share button for each verse
+        let shareButton = document.createElement('button');
+        shareButton.textContent = "Share";
+        shareButton.classList.add('shareSingleButton');
+        shareButton.addEventListener('click', function() {
+            shareVerse(verse);
+        });
+
+        li.appendChild(shareButton);
+        verseList.appendChild(li);
+    });
+
+    // Show the verse section and hide the categories
+    document.querySelector('.categories').style.display = 'none';
+    verseSection.style.display = 'block';
+}
+
+// Check if there's a hash in the URL on page load
+window.addEventListener('load', function() {
+    let hash = window.location.hash.substring(1); // Get the hash without the '#'
+    if (hash && verses[hash]) {
+        showCategory(hash); // Directly show the category if it exists in the verses object
+    }
+});
+
+// Event listener for category clicks (existing code)
+document.querySelectorAll('.category-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+        let category = this.getAttribute('data-category');
+        window.location.hash = category; // Update the URL with the selected category ID
+        showCategory(category); // Show the selected category
+    });
+});
+
+// Function to navigate to homepage
+function goToHomepage() {
+    window.location.href = 'index.html'; // Redirect to the homepage
+}
+
+// Event listener for header click
+document.getElementById('header').addEventListener('click', function() {
+    goToHomepage(); // Navigate to homepage
+});
+
+// Check if there's a hash in the URL on page load
+window.addEventListener('load', function() {
+    let hash = window.location.hash.substring(1); // Get the hash without the '#'
+    if (hash && verses[hash]) {
+        showCategory(hash); // Directly show the category if it exists in the verses object
+    }
+});
+
+// Event listener for category clicks (existing code)
+document.querySelectorAll('.category-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+        let category = this.getAttribute('data-category');
+        window.location.hash = category; // Update the URL with the selected category ID
+        showCategory(category); // Show the selected category
+    });
+});

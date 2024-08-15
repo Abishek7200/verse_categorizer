@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamil Bible Verse Categorizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <h1>வேதாகம வசன தொகுப்பு</h1>
+        <p>ஒவ்வொரு சூழ்நிலைக்கும் சரியான வசனத்தைக் கண்டறியவும்!</p>
+    </header>
+
+    <section class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for a verse or situation...">
+    </section>
+
+    <section class="categories">
+        <div class="category-card" data-category="hope">
+            <h2>நம்பிக்கை</h2>
+            <p>Hope</p>
+        </div>
+        <div class="category-card" data-category="faith">
+            <h2>விசுவாசம்</h2>
+            <p>Faith</p>
+        </div>
+        <div class="category-card" data-category="peace">
+            <h2>அமைதி</h2>
+            <p>Peace</p>
+        </div>
+        <div class="category-card" data-category="wisdom">
+            <h2>ஞானம்</h2>
+            <p>Wisdom</p>
+        </div>
+        <div class="category-card" data-category="strength">
+            <h2>உறுதி</h2>
+            <p>Strength</p>
+        </div>
+        <div class="category-card" data-category="comfort">
+            <h2>அறுதிப்பு</h2>
+            <p>Comfort</p>
+        </div>
+        <div class="category-card" data-category="guidance">
+            <h2>திசைநுட்பம்</h2>
+            <p>guidance</p>
+        </div>
+        <div class="category-card" data-category="gratitude">
+            <h2>நன்றி</h2>
+            <p>gratitude</p>
+        </div>
+        <div class="category-card" data-category="love">
+            <h2>அன்பு</h2>
+            <p>love</p>
+        </div>
+        <div class="category-card" data-category="courage">
+            <h2>தன்னம்பிக்கை</h2>
+            <p>courage</p>
+        </div>
+        <div class="category-card" data-category="forgiveness">
+            <h2>மன்னிப்பு</h2>
+            <p>forgiveness</p>
+        </div>
+        <div class="category-card" data-category="hopeintrials">
+            <h2>பிரச்சினைகளில் நம்பிக்கை</h2>
+            <p>hope-in-trials</p>
+        </div>
+        <div class="category-card" data-category="joy">
+            <h2>மகிழ்ச்சி</h2>
+            <p>joy</p>
+        </div>
+        <div class="category-card" data-category="healing">
+            <h2>மருத்துவம்</h2>
+            <p>healing</p>
+        </div>
+        <div class="category-card" data-category="trust">
+            <h2>நம்பிக்கை</h2>
+            <p>trust</p>
+        </div>
+        <div class="category-card" data-category="prayer">
+            <h2>கேட்பு</h2>
+            <p>prayer</p>
+        </div>        
+    </section>
+    
+
+    <section class="verses" id="verseSection">
+        <h2 id="categoryTitle"></h2>
+        <ul id="verseList"></ul>
+        <button id="backButton">Back to Categories</button>
+        <button id="shareButton">Share All Verses</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Verse Categorizer. All Rights Reserved by Johnson.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
