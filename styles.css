@@ -161,3 +161,50 @@ footer {
     padding: 10px;
     border-top: 2px solid #ccc;
 }
+/* Make share button smaller */
+.shareSingleButton {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 8px; /* Adjusted padding to make the button smaller */
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 12px; /* Reduced font size */
+}
+
+.shareSingleButton:hover {
+    background-color: #128C7E;
+}
+
+/* Style for like button */
+.likeButton {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.likeButton:hover {
+    background-color: #ff6b81;
+}
+/* Hide the QR code by default */
+#qrCode {
+    display: none;
+    width: 100px; /* Adjust the size as needed */
+    margin-top: 10px;
+    position: absolute;
+    top: 5px;
+    right: 42px;
+}
+
+/* Show the QR code only on desktop screens */
+@media (min-width: 768px) {
+    #qrCode {
+        display: block;
+    }
+}

@@ -127,7 +127,6 @@ const verses = {
     ]
 };
 
-
 // Function to display verses based on category and update the URL
 document.querySelectorAll('.category-card').forEach(function(card) {
     card.addEventListener('click', function() {
@@ -136,40 +135,83 @@ document.querySelectorAll('.category-card').forEach(function(card) {
         // Update the URL with the selected category ID
         window.location.hash = category;
 
-        // Show the verses for the selected category (existing functionality)
-        let verseSection = document.getElementById('verseSection');
-        let verseList = document.getElementById('verseList');
-        let categoryTitle = document.getElementById('categoryTitle');
-
-        // Set the category title
-        categoryTitle.textContent = this.querySelector('h2').textContent;
-
-        // Clear any previous verses
-        verseList.innerHTML = '';
-
-        // Populate verses (you already have this part of the code)
-        verses[category].forEach(function(verse) {
-            let li = document.createElement('li');
-            li.textContent = verse;
-
-            // Create share button for each verse (existing functionality)
-            let shareButton = document.createElement('button');
-            shareButton.textContent = "Share";
-            shareButton.classList.add('shareSingleButton');
-            shareButton.addEventListener('click', function() {
-                shareVerse(verse);
-            });
-
-            li.appendChild(shareButton);
-            verseList.appendChild(li);
-        });
-
-        // Show the verse section and hide the categories (existing functionality)
-        document.querySelector('.categories').style.display = 'none';
-        verseSection.style.display = 'block';
+        showCategory(category); // Show the selected category
     });
 });
 
+// Show category with like functionality
+function showCategory(category) {
+    let verseSection = document.getElementById('verseSection');
+    let verseList = document.getElementById('verseList');
+    let categoryTitle = document.getElementById('categoryTitle');
+
+    // Set the category title
+    categoryTitle.textContent = document.querySelector(`[data-category="${category}"] h2`).textContent;
+
+    // Clear any previous verses
+    verseList.innerHTML = '';
+
+    // Populate verses with share and like buttons
+    verses[category].forEach(function(verse, index) {
+        let li = document.createElement('li');
+        li.textContent = verse;
+
+        // Create share button
+        let shareButton = document.createElement('button');
+        shareButton.textContent = "Share";
+        shareButton.classList.add('shareSingleButton');
+        shareButton.addEventListener('click', function() {
+            shareVerse(verse);
+        });
+
+        // Create like button
+        let likeButton = document.createElement('button');
+        likeButton.textContent = "Like";
+        likeButton.classList.add('likeButton');
+        let likeCount = document.createElement('span');
+        likeCount.textContent = getLikes(verse);
+        likeButton.addEventListener('click', function() {
+            updateLikes(verse);
+            likeCount.textContent = getLikes(verse);
+        });
+
+        li.appendChild(shareButton);
+        li.appendChild(likeButton);
+        li.appendChild(likeCount);
+        verseList.appendChild(li);
+    });
+
+    // Show the verse section and hide the categories
+    document.querySelector('.categories').style.display = 'none';
+    verseSection.style.display = 'block';
+}
+
+// Like functions
+function getLikes(verse) {
+    return localStorage.getItem(verse) || 0;
+}
+
+function updateLikes(verse) {
+    let likes = parseInt(localStorage.getItem(verse) || 0);
+    localStorage.setItem(verse, likes + 1);
+}
+
+// Function to share single verse
+function shareVerse(verse) {
+    shareContent(verse);
+}
+
+// Function to share content (handles both single verse and all verses)
+function shareContent(content) {
+    if (navigator.share) {
+        navigator.share({
+            text: content,
+        }).catch((error) => console.log('Error sharing:', error));
+    } else {
+        let whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(content)}`;
+        window.open(whatsappUrl, '_blank');
+    }
+}
 
 // Back button functionality
 document.getElementById('backButton').addEventListener('click', function() {
@@ -193,88 +235,12 @@ document.getElementById('searchInput').addEventListener('input', function() {
     });
 });
 
-
-// Share all verses functionality
-document.getElementById('shareButton').addEventListener('click', function() {
-    let categoryTitle = document.getElementById('categoryTitle').textContent;
-    let versesList = document.querySelectorAll('#verseList li');
-    let versesText = '';
-
-    versesList.forEach(function(li) {
-        versesText += li.childNodes[0].textContent + '\n';
-    });
-
-    let shareMessage = `${categoryTitle}:\n\n${versesText}`;
-    shareContent(shareMessage);
-});
-
-// Function to share single verse
-function shareVerse(verse) {
-    shareContent(verse);
-}
-
-// Function to share content (handles both single verse and all verses)
-function shareContent(content) {
-    if (navigator.share) {
-        navigator.share({
-            text: content,
-        }).catch((error) => console.log('Error sharing:', error));
-    } else {
-        let whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(content)}`;
-        window.open(whatsappUrl, '_blank');
-    }
-}
-
-
-// Function to display verses based on category
-function showCategory(category) {
-    let verseSection = document.getElementById('verseSection');
-    let verseList = document.getElementById('verseList');
-    let categoryTitle = document.getElementById('categoryTitle');
-
-    // Set the category title
-    categoryTitle.textContent = document.querySelector(`[data-category="${category}"] h2`).textContent;
-
-    // Clear any previous verses
-    verseList.innerHTML = '';
-
-    // Populate verses with share button
-    verses[category].forEach(function(verse) {
-        let li = document.createElement('li');
-        li.textContent = verse;
-
-        // Create share button for each verse
-        let shareButton = document.createElement('button');
-        shareButton.textContent = "Share";
-        shareButton.classList.add('shareSingleButton');
-        shareButton.addEventListener('click', function() {
-            shareVerse(verse);
-        });
-
-        li.appendChild(shareButton);
-        verseList.appendChild(li);
-    });
-
-    // Show the verse section and hide the categories
-    document.querySelector('.categories').style.display = 'none';
-    verseSection.style.display = 'block';
-}
-
 // Check if there's a hash in the URL on page load
 window.addEventListener('load', function() {
     let hash = window.location.hash.substring(1); // Get the hash without the '#'
     if (hash && verses[hash]) {
         showCategory(hash); // Directly show the category if it exists in the verses object
     }
-});
-
-// Event listener for category clicks (existing code)
-document.querySelectorAll('.category-card').forEach(function(card) {
-    card.addEventListener('click', function() {
-        let category = this.getAttribute('data-category');
-        window.location.hash = category; // Update the URL with the selected category ID
-        showCategory(category); // Show the selected category
-    });
 });
 
 // Function to navigate to homepage
@@ -285,21 +251,4 @@ function goToHomepage() {
 // Event listener for header click
 document.getElementById('header').addEventListener('click', function() {
     goToHomepage(); // Navigate to homepage
-});
-
-// Check if there's a hash in the URL on page load
-window.addEventListener('load', function() {
-    let hash = window.location.hash.substring(1); // Get the hash without the '#'
-    if (hash && verses[hash]) {
-        showCategory(hash); // Directly show the category if it exists in the verses object
-    }
-});
-
-// Event listener for category clicks (existing code)
-document.querySelectorAll('.category-card').forEach(function(card) {
-    card.addEventListener('click', function() {
-        let category = this.getAttribute('data-category');
-        window.location.hash = category; // Update the URL with the selected category ID
-        showCategory(category); // Show the selected category
-    });
 });
